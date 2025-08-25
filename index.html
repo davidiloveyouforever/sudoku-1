@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>數獨遊戲 - 困難模式</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>數獨遊戲</h1>
+            <p class="difficulty">困難模式</p>
+        </header>
+        
+        <div class="game-container">
+            <div class="sudoku-board" id="sudokuBoard"></div>
+            
+            <div class="controls">
+                <div class="number-pad">
+                    <button class="num-btn" data-number="1">1</button>
+                    <button class="num-btn" data-number="2">2</button>
+                    <button class="num-btn" data-number="3">3</button>
+                    <button class="num-btn" data-number="4">4</button>
+                    <button class="num-btn" data-number="5">5</button>
+                    <button class="num-btn" data-number="6">6</button>
+                    <button class="num-btn" data-number="7">7</button>
+                    <button class="num-btn" data-number="8">8</button>
+                    <button class="num-btn" data-number="9">9</button>
+                </div>
+                
+                <div class="action-buttons">
+                    <button class="action-btn" id="clearBtn">清除</button>
+                    <button class="action-btn" id="newGameBtn">新遊戲</button>
+                    <button class="action-btn" id="checkBtn">檢查</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="status">
+            <div class="timer" id="timer">時間: 00:00</div>
+            <div class="mistakes" id="mistakes">錯誤: 0</div>
+        </div>
+    </div>
+    
+    <!-- 音頻元素 -->
+    <audio id="errorSound" preload="auto">
+        <source src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559NEAxQp+PwtmMcBjiR1/LMeSwFJHfH8N2QQAoUXrTp66hVFApGn+DyvmwhBSuBzvLZiTYIG2m98OScTgwOUarm7blmGgU7k9n1unEiBC13yO/eizEIHWq+8+OWT" type="audio/wav">
+    </audio>
+    
+    <script src="script.js"></script>
+</body>
+</html>
